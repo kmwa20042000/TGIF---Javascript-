@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Senate Attendance | TGIF </title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Congress 113
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./house-data.html">House</a>
+                            <a class="dropdown-item" href="./senate-data.html">Senate</a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Attendance
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./house-attendance.html">House</a>
+                            <a class="dropdown-item" href="./senate-attendance.html">Senate</a>
+                    </li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Loyalty
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./house-party-loyalty.html">House</a>
+                            <a class="dropdown-item" href="./senate-party-loyalty.html">Senate</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+
+    <br>
+    <div class="container">
+        <div class="row justify-content-md-center" style="height: 75%;">
+            <img src="./img/ogp.jpg" class="rounded">
+        </div>
+    </div>
+
+    <div class="container-xl">
+        <h2>Attendance</h2>
+        <p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house.
+            Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most
+            cases, debates continue even if a majority is not present.</p>
+
+        <p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye"
+            or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters,
+            as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic
+            device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if
+            present) cast the tiebreaking vote.</p>
+
+        <h2>Senate at a glance</h2>
+        <table class="table table-striped table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th>Party</th>
+                    <th>Number of Reps</th>
+                    <th>% Voted with Prty</th>
+                </tr>
+                </theadid="tableheaders">
+            <tbody>
+                <tr id="republican" class="tablecontent">
+                    <td>Republican</td>
+                </tr>
+                <tr id="democrat" class="tablecontent">
+                    <td>Democrat</td>
+                </tr>
+                <tr id="independent" class="tablecontent">
+                    <td>Independent</td>
+                </tr>
+                <tr id="loaderattendance" class="spinner-border m-5" class="d-flex justify-content-center"
+                    role="status"></tr>
+            </tbody>
+        </table>
+
+        <h2>Least Engaged (Bottom 10% Attendance)</h2>
+        <div class="table-holder">
+            <table class="table table-striped table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Name</th>
+                        <th>Number of Missed Votes</th>
+                        <th>% Missed</th>
+                    </tr>
+                </thead>
+                <tbody id="leastengaged">
+
+                </tbody>
+                <tr id="loader" class="spinner-border m-5" class="d-flex justify-content-center" role="status"></tr>
+            </table>
+        </div>
+        <h2>Most Engaged (Top 10% Attendance)</h2>
+        <div class="table-holder">
+            <table class="table table-striped table-hover">
+                <thead thead class="thead-light">
+                    <tr>
+                        <th>Name</th>
+                        <th>Number of Missed Votes</th>
+                        <th>% Missed</th>
+                    </tr>
+                </thead>
+                <tbody id="mostengaged">
+
+                </tbody>
+                <tr id="loadermostengaged" class="spinner-border m-5" class="d-flex justify-content-center"
+                    role="status"></tr>
+            </table>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="./resources/button.js"></script>
+    <script src="./javascript/for-senate.js"></script>
+</body>
+<footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <p> TGIF.org - <a href="https://www.linkedin.com/in/kazufumi-onishi-bb8a7584/">Kazu Onishi</a></p>
+    </div>
+</footer>
+
+</html>
